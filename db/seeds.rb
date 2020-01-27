@@ -8,7 +8,7 @@ GUESTS = Array(1..10)
 
 10.times do
   Flat.create!(
-    name: Faker::Name,
+    name: Faker::Name.name,
     address: Faker::Address.full_address,
     description: Faker::Lorem.paragraph,
     price_per_night: PRICES_FACTOR.sample * PRICES.sample,

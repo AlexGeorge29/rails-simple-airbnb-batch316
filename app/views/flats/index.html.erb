@@ -1,0 +1,17 @@
+<h1>
+    List of all available flats
+</h1>
+
+
+<% @flats.each do |flat| %>
+<div
+  class="flat_card">
+  <%= link_to flat_path(flat) do %>
+    <%= flat.name %>
+    <%= flat.address %>
+    <%= flat.description %>
+    <%= flat.price_per_night %>
+    <%= flat.number_of_guests %>
+  <% end %>  
+</div>
+<% end %>
