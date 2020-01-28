@@ -1,3 +1,3 @@
 class Flat < ApplicationRecord
-  validates :name, :address, :description, :price_per_night, presence: true
+  validates :name, :address, presence: true
 end

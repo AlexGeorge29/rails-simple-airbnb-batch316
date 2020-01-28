@@ -2,16 +2,22 @@
     List of all available flats
 </h1>
 
+<div class="flats-container">
 
-<% @flats.each do |flat| %>
-<div
-  class="flat_card">
-  <%= link_to flat_path(flat) do %>
-    <%= flat.name %>
-    <%= flat.address %>
-    <%= flat.description %>
-    <%= flat.price_per_night %>
-    <%= flat.number_of_guests %>
-  <% end %>  
+  <% @flats.each do |flat| %>
+    <div class="flat-card">
+        <%= link_to flat_path(flat) do %>
+          <h2><%= flat.name %></h2>
+          <p><%= flat.address %></p>
+          <p><%= flat.description %></p>
+          <p><%= flat.price_per_night %></p>
+          <p><%= flat.number_of_guests %></p>
+          <%= link_to "Remove", flat_path(flat),
+                method: :delete, 
+                data: { confirm: "Are you sure?" },
+                class: 'ml-3 text-danger'
+            %>
+    <% end %>  
+  </div>
+  <% end %>
 </div>
-<% end %>

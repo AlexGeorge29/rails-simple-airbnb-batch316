@@ -6,7 +6,7 @@ PRICES_FACTOR = Array(1..5)
 PRICES = Array(1..9)
 GUESTS = Array(1..10)
 
-10.times do
+5.times do
   Flat.create!(
     name: Faker::Name.name,
     address: Faker::Address.full_address,
